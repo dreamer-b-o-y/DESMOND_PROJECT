@@ -11,7 +11,7 @@
 
 #5- please try each command you create and test it very will before you push your changes to the (main repo) @
 
-#6- sometimes we are gonna need to nickname things in our code just to reffrence it and access it quicker, so whenver you want to nickname a thing just write a comment with its name and use this format       *[THE NICKNAME]*     for instance =====>   *[The pluged ear]*   ,  and then write its description inside (Brackets)  "look at line 241 and you will understand" !!
+#6- sometimes we are gonna need to nickname things in our code just to reffrence it and access it quicker, so whenver you want to nickname a thing just write a comment with its name and use this format       *[THE NICKNAME]*     for instance =====>   *[The pluged ear]*   ,  and then write its description inside (Brackets)  "look at line 251 and you will understand" !!
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -28,7 +28,17 @@
 
 
 
+#This is a repo for THE SECRET PROJECT (JARVES PROJECT)
 
+#NOTE: every collaborator in this project "Kindly", must adhere to confidentiality, this project is TOP SECRECT and can't be shown to the public yet since it is a unique idea and we will be the first of our kind to do something like that.
+
+#WHAT IS JARVIS?
+
+#JARVIS project is not just a virtual assistant in your computer and it's not like [ google_assistane or Cortana or any V.assistante ] JARVIS is a "Terminal commands executor" This means that any commands that you can write in your Terminal, can be executed without typing it you can just order JARVIS to execute it for you by just saying a verbal command or an oral order.
+
+#It's "Literally" just like JARVIS the AI of Tony Stark aka "Iron Man" or at least very close to it.
+
+#JARVIS consists of a set of pre-written instructions (commands) that can be executed with just an oral order or a verbal command.
 
 
 
@@ -40,6 +50,9 @@ import sys
 import pyttsx3
 import subprocess
 import pyautogui
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
 #######################################
 
 
@@ -96,15 +109,15 @@ engine.runAndWait() # running the voice to start speaking
 # The kernel of JARVIS
 #------------------------------
 
-rec = S_R.Recognizer()
+recognizer = S_R.Recognizer()
 
 with S_R.Microphone() as src:
 
     while True:
         print('Say Something.....')
-        audio = rec.listen(src)
-        text = rec.recognize_google(audio)
-        print(text)
+        audio = recognizer.listen(src)
+        text = recognizer.recognize_google(audio)
+        print(f"command: {text}")
         print('\n'*2)
 
 
@@ -113,9 +126,9 @@ with S_R.Microphone() as src:
     #- The introduction of JARViS -#
 
         if text in ["Jarvis introduce" , "Jervis introduce" , "Jarves introduce"]:
-            engine.say("hello..........i am Jarvis, your virtual assistant...........I'm here to make your computer use easier............Just say Jarvis......followed by what you want me to do.........and After completing your command........I will still be waiting for the next command,..........so please when you don't want anything from me,......just say....thanks...close, for instance........Try saying Jarvis open my photos, then say....thanks...close \n and to hear this message again say...Jarvis....again")
+            print("hello i am Jarvis, your virtual assistant I'm here to make your computer use easier Just say Jarvis....followed by what you want me to do and After completing your command I will still be waiting for the next command, so please when you don't want anything from me, just say.... 'thanks close', for instance........Try to say....  'Jarvis open my photos', then say.... 'thanks close' \n and to hear this message again say... 'Jarvis again'")
+            engine.say("hello..........i am Jarvis, your virtual assistant...........I'm here to make your computer use easier............Just say Jarvis......followed by what you want me to do.........and After completing your command........I will still be waiting for the next command,..........so please when you don't want anything from me,......just say....thanks...close, for instance........Try to say....Jarvis open my photos, then say....thanks...close \n and to hear this message again say...Jarvis....again")
             engine.runAndWait()
-            print(text)
             print('\n'*2)
         
 
@@ -128,7 +141,6 @@ with S_R.Microphone() as src:
         elif text in ["Jarvis again" , "Jervis again" , "Jarves again"]:
             engine.say("hello..........i am Jarvis, your virtual assistant...........I'm here to make your computer use easier............Just say Jarvis......followed by what you want me to do.........and After completing your command........I will be still waiting for the next command,..........so please when you don't want anything from me,.....just say....thanks...close, for instance........Try saying Jarvis open my photos, then say....thanks...close \n and to hear this message again say...Jarvis....again")
             engine.runAndWait()
-            print(text)
             print('\n'*2)
 
 
@@ -143,7 +155,6 @@ with S_R.Microphone() as src:
             print('hello Master, what do you want me to do?')
             engine.say("hello Master, what do you want me to do?")
             engine.runAndWait()
-            print(text)
             print('\n'*2)
             
 
@@ -154,7 +165,7 @@ with S_R.Microphone() as src:
 
     #- Introduction of JARVIS creators -#
 
-        elif text == "Jarvis who created you":
+        elif text == "who created you":
             print("The PlaceHolder team created me in 2023 and currently i am still under construction if you want to know more about them you can just reach their GitHub acounts the names are [Abdelrhman helmy , Mohamed Ayman , Yassin Waleed , Ayman Mohamed] ")
             engine.say("The PlaceHolder team created me in 2023 ........ and currently i am still under construction ................ if you want to know more about them you can just reach their GitHub acounts .............. the names are ............ [Abdelrhman helmy ,......... Mohamed Ayman ,........... Yassin Waleed ,.......... Ayman Mohamed] ")
             engine.runAndWait()
@@ -190,16 +201,101 @@ with S_R.Microphone() as src:
             print("Working on it...")
             engine.say("Working on it...")
             engine.runAndWait()
-            print(text)
             print('\n'*2)
             
             # Specify the path to the file or folder you want to open in File Explorer
-            file_or_folder_path = "E:\Body\downloads\Egybest"
+            file_or_folder_path = r"C:\Users\body\OneDrive\Wallpapers\wallpaperFlare"
 
             # Use the 'explorer' command to open the file or folder in File Explorer
             subprocess.Popen(['explorer', file_or_folder_path], shell=True)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # elif text in ['Jarvis WhatsApp' , 'Jarves WhatsApp' , 'Jervis WhatsApp']:            
+        #     print('to whom you want to send the WhatsApp message?')
+        #     engine.say('to whom you want to send the whats app message?')
+        #     engine.runAndWait()
+        #     print('\n'*2)
+
+
+        #     print('Say a contact name.....')
+        #     audio = recognizer.listen(src)
+        #     contact = recognizer.recognize_google(audio)
+        #     print(f"contact name: {contact}")
+        #     print('\n'*2)
+            
+            
+        #     # while contact != 'Jack' :
+
+        #     if contact in ['Jack']:
+
+        #         def send_whatsapp_message(phone_number, message):
+        #             # Specify the path to the Firefox WebDriver (geckodriver)
+        #             driver_path = r'C:\Users\body\Downloads\geckodriver-v0.33.0-win64/geckodriver.exe'
+
+        #             # Initialize the Firefox WebDriver
+        #             driver = webdriver.Firefox(executable_path=driver_path)
+
+        #             # Open WhatsApp Web
+        #             driver.get("https://web.whatsapp.com/")
+        #             time.sleep(15)  # Wait for the user to scan the QR code manually
+
+        #             # Find the chat input field
+        #             chat_input = driver.find_element_by_xpath('//div[@contenteditable="true"][@data-tab="1"]')
+
+        #             # Type the phone number (including country code)
+        #             chat_input.send_keys(phone_number)
+        #             time.sleep(1)
+        #             chat_input.send_keys(Keys.ENTER)
+
+        #             # Wait for a while to load the chat
+        #             time.sleep(2)
+
+        #             # Type the message
+        #             chat_input = driver.find_element_by_xpath('//div[@contenteditable="true"][@data-tab="1"]')
+        #             chat_input.send_keys(message)
+        #             time.sleep(1)
+
+        #             # Send the message
+        #             chat_input.send_keys(Keys.ENTER)
+
+        #             # Close the browser
+        #             driver.quit()
+
+        #         # Example usage
+        #         phone_number = "01020117743"  # Replace with the recipient's phone number
+        #         message = "Hello, this is a test message from Python using Firefox!"
+
+        #         send_whatsapp_message(phone_number, message)
+        #     else:
+        #         print("Sorry i think i didn't get the name right, can you say it again")
+        #         engine.say("Sorry....i think i didn't get the name right, can you say it again")
+        #         engine.runAndWait()
+
+        #         audio = recognizer.listen(src)
+        #         contact = recognizer.recognize_google(audio)
+        #         print('Say a contact.....')
+        #         print(f"contact name: {contact}")
+        #         print('\n'*2)
+
+
+
+
+
+
+       
 
 
 
@@ -217,13 +313,24 @@ with S_R.Microphone() as src:
 
 
 
+        elif text in "Jarvis encrypt":
+            print("Working on it...")
+            engine.say("Working on it...")
+            engine.runAndWait()
+            print('\n'*2)
+            
+            # Specify the path to the file or folder you want to open in File Explorer
+            
+
+            # Use the 'explorer' command to open the file or folder in File Explorer
+            subprocess.Popen('manage-bde encrypt', shell=True)
 
 
 
 
 
 
-#######################################################################################################################3
+#######################################################################################################################
 
 
     #- The deactivation key word ( thanks close ) -#
@@ -231,7 +338,6 @@ with S_R.Microphone() as src:
             print("Happy to help Goodbye.")
             engine.say("Happy to help ..... Goodbye.")
             engine.runAndWait()
-            print(text)
             sys.exit(0)
 
             
@@ -254,3 +360,36 @@ with S_R.Microphone() as src:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# make him listen to the name    #DONE
+# if name was equal to jack    #DONE
+# send jack a message with a function()    #DONE
+# else if name was not equal jack go and make him listen again     #DONE
+# then if the name was equal jack send him a message (loop)
+# this loop will still work until name is equal to jack then it will break
+#
+#
+#
