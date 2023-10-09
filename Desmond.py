@@ -1,11 +1,11 @@
 ###############################################################
-# Some Rules for JARVIS kernel (they can be changed if needed)!
+# Some Rules for Desmond kernel (they can be changed if needed)!
 #--------------------------------------------------------------
-#1- Any command that will be created must be start with the "activation key word" (JARVIS). @
+#1- Any command that will be created must be start with the "activation key word" (Desmond). @
 
 #2- please code with keeping the documentation in mind, don't forget to write comments to make it clear and easy for the other developers to collaborat. @
 
-#3- it's a good practice to try the command you just created to see how does JARVIS actually heared it and then make a list of every possible macthing word, to make the command take affect from the first time (look at the kernel and you will understand) !!
+#3- it's a good practice to try the command you just created to see how does Desmond actually heared it and then make a list of every possible macthing word, to make the command take affect from the first time (look at the kernel and you will understand) !!
 
 #4- it's a good practice to put some "dots (..........)" at the speaking voice to avoid the rush in speaking and not understanding what is meant (look at the kernel and you will understand) !!
 
@@ -28,17 +28,17 @@
 
 
 
-#This is a repo for THE SECRET PROJECT (JARVES PROJECT)
+#This is a repo for THE SECRET PROJECT (Desmond PROJECT)
 
 #NOTE: every collaborator in this project "Kindly", must adhere to confidentiality, this project is TOP SECRECT and can't be shown to the public yet since it is a unique idea and we will be the first of our kind to do something like that.
 
-#WHAT IS JARVIS?
+#WHAT IS Desmond?
 
-#JARVIS project is not just a virtual assistant in your computer and it's not like [ google_assistane or Cortana or any V.assistante ] JARVIS is a "Terminal commands executor" This means that any commands that you can write in your Terminal, can be executed without typing it you can just order JARVIS to execute it for you by just saying a verbal command or an oral order.
+#Desmond project is not just a virtual assistant in your computer and it's not like [ google_assistane or Cortana or any V.assistante ] Jasper is a "Terminal commands executor" This means that any commands that you can write in your Terminal, can be executed without typing it you can just order Desmond to execute it for you by just saying a verbal command or an oral order.
 
-#It's "Literally" just like JARVIS the AI of Tony Stark aka "Iron Man" or at least very close to it.
+#It's "Literally" just like Desmond the AI of Tony Stark aka "Iron Man" or at least very close to it.
 
-#JARVIS consists of a set of pre-written instructions (commands) that can be executed with just an oral order or a verbal command.
+#Desmond consists of a set of pre-written instructions (commands) that can be executed with just an oral order or a verbal command.
 
 
 
@@ -68,7 +68,7 @@ engine = pyttsx3.init()
 
 voices = engine.getProperty('voices') # getting the 'voices' property to modify on it
 engine.setProperty('voice', voices[0].id) # choosing the voice tune [0] for a man's voice // [1] for a woman's voice
-engine.say("hello.........Jarvis in your service...........to know more about me just say.......Jarvis....introduce")
+engine.say("hello.........Desmond in your service...........to know more about me just say.......Desmond....introduce")
 engine.runAndWait() # running the voice to start speaking
 
 
@@ -106,7 +106,7 @@ engine.runAndWait() # running the voice to start speaking
 
 
 
-# The kernel of JARVIS
+# The kernel of Desmond
 #------------------------------
 
 recognizer = S_R.Recognizer()
@@ -123,11 +123,11 @@ with S_R.Microphone() as src:
 
 
 
-    #- The introduction of JARViS -#
+    #- The introduction of Jasper -#
 
-        if text in ["Jarvis introduce" , "Jervis introduce" , "Jarves introduce"]:
-            print("hello i am Jarvis, your virtual assistant I'm here to make your computer use easier Just say Jarvis....followed by what you want me to do and After completing your command I will still be waiting for the next command, so please when you don't want anything from me, just say.... 'thanks close', for instance........Try to say....  'Jarvis open my photos', then say.... 'thanks close' \n and to hear this message again say... 'Jarvis again'")
-            engine.say("hello..........i am Jarvis, your virtual assistant...........I'm here to make your computer use easier............Just say Jarvis......followed by what you want me to do.........and After completing your command........I will still be waiting for the next command,..........so please when you don't want anything from me,......just say....thanks...close, for instance........Try to say....Jarvis open my photos, then say....thanks...close \n and to hear this message again say...Jarvis....again")
+        if text in ["Desmond introduce" , "Jervis introduce" , "Desmond introduce"]:
+            print("hello i am Desmond, your virtual assistant I'm here to make your computer use easier Just say Desmond....followed by what you want me to do and After completing your command I will still be waiting for the next command, so please when you don't want anything from me, just say.... 'thanks close', for instance........Try to say....  'Desmond open my photos', then say.... 'thanks close' \n and to hear this message again say... 'Desmond again'")
+            engine.say("hello..........i am Desmond, your virtual assistant...........I'm here to make your computer use easier............Just say Desmond......followed by what you want me to do.........and After completing your command........I will still be waiting for the next command,..........so please when you don't want anything from me,......just say....thanks...close, for instance........Try to say....Desmond open my photos, then say....thanks...close \n and to hear this message again say...Desmond....again")
             engine.runAndWait()
             print('\n'*2)
         
@@ -137,9 +137,9 @@ with S_R.Microphone() as src:
 
 
 
-    #- Repeat The introduction of JARViS -#
-        elif text in ["Jarvis again" , "Jervis again" , "Jarves again"]:
-            engine.say("hello..........i am Jarvis, your virtual assistant...........I'm here to make your computer use easier............Just say Jarvis......followed by what you want me to do.........and After completing your command........I will be still waiting for the next command,..........so please when you don't want anything from me,.....just say....thanks...close, for instance........Try saying Jarvis open my photos, then say....thanks...close \n and to hear this message again say...Jarvis....again")
+    #- Repeat The introduction of Desmond -#
+        elif text in ["Desmond again" , "Desmond again" , "Desmond again"]:
+            engine.say("hello..........i am Desmond, your virtual assistant...........I'm here to make your computer use easier............Just say Desmond......followed by what you want me to do.........and After completing your command........I will be still waiting for the next command,..........so please when you don't want anything from me,.....just say....thanks...close, for instance........Try saying Desmond open my photos, then say....thanks...close \n and to hear this message again say...Desmond....again")
             engine.runAndWait()
             print('\n'*2)
 
@@ -149,9 +149,9 @@ with S_R.Microphone() as src:
 
 
 
-    #- The activation key word ( JARViS ) -#
+    #- The activation key word ( Desmond ) -#
 
-        elif text in ["Jarvis" , "Jervis" , "Jarves"]:
+        elif text in ["Desmond" , "Desmond" , "Desmond"]:
             print('hello Master, what do you want me to do?')
             engine.say("hello Master, what do you want me to do?")
             engine.runAndWait()
@@ -163,7 +163,7 @@ with S_R.Microphone() as src:
 
 
 
-    #- Introduction of JARVIS creators -#
+    #- Introduction of Desmond creators -#
 
         elif text == "who created you":
             print("The PlaceHolder team created me in 2023 and currently i am still under construction if you want to know more about them you can just reach their GitHub acounts the names are [Abdelrhman helmy , Mohamed Ayman , Yassin Waleed , Ayman Mohamed] ")
@@ -192,12 +192,12 @@ with S_R.Microphone() as src:
 
 
 #######################################################################################################################
-#============ JARVIS commands ============#
+#============ Desmond commands ============#
 
 
-    #- personal use JARVIS commands -#
+    #- personal use Desmond commands -#
 
-        elif text in ["Jarvis open my photos" , "Jervis open my photos" , "Jarves open my photos" ]:
+        elif text in ["Desmond open my photos" , "Desmond open my photos" , "Desmond open my photos" ]:
             print("Working on it...")
             engine.say("Working on it...")
             engine.runAndWait()
@@ -223,7 +223,7 @@ with S_R.Microphone() as src:
 
 
 
-        # elif text in ['Jarvis WhatsApp' , 'Jarves WhatsApp' , 'Jervis WhatsApp']:            
+        # elif text in ['Desmond WhatsApp' , 'Desmond WhatsApp' , 'Desmond WhatsApp']:            
         #     print('to whom you want to send the WhatsApp message?')
         #     engine.say('to whom you want to send the whats app message?')
         #     engine.runAndWait()
@@ -307,13 +307,13 @@ with S_R.Microphone() as src:
 
 
 
-    #- proffesional JARVIS commands ( Terminal commands )-#
+    #- proffesional Desmond commands ( Terminal commands )-#
 
 
 
 
 
-        elif text in "Jarvis encrypt":
+        elif text in "Desmond encrypt":
             print("Working on it...")
             engine.say("Working on it...")
             engine.runAndWait()
@@ -344,7 +344,7 @@ with S_R.Microphone() as src:
 
 
 
-    #- *[The pluged ear]* (the sentence in case JARVIS heared a command or an order that is not inside its database or a command that he simply can't processing it) -#
+    #- *[The pluged ear]* (the sentence in case Desmond heared a command or an order that is not inside its database or a command that he simply can't processing it) -#
 
         else:
             print("Sorry i didn't understand,can you say that again in a more clear voice?")
