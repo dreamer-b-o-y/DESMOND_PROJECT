@@ -1,3 +1,17 @@
+#############################################################
+# importing openAI Module and make jarvis like REAL JARVIS  #
+# mergin jarvis with chatGPT                                #
+# developing JARVIS daily                                   #
+#                                                           #
+#                                                           #
+#                                                           #
+#                                                           #
+#############################################################
+
+
+
+
+
 ###############################################################
 # Some Rules for Desmond kernel (they can be changed if needed)!
 #--------------------------------------------------------------
@@ -166,8 +180,8 @@ with S_R.Microphone() as src:
     #- Introduction of Desmond creators -#
 
         elif text == "who created you":
-            print("The PlaceHolder team created me in 2023 and currently i am still under construction if you want to know more about them you can just reach their GitHub acounts the names are [Abdelrhman helmy , Mohamed Ayman , Yassin Waleed , Ayman Mohamed] ")
-            engine.say("The PlaceHolder team created me in 2023 ........ and currently i am still under construction ................ if you want to know more about them you can just reach their GitHub acounts .............. the names are ............ [Abdelrhman helmy ,......... Mohamed Ayman ,........... Yassin Waleed ,.......... Ayman Mohamed] ")
+            print("The Ready team created me in 2023 and currently i am still under construction if you want to know more about them you can just reach their GitHub acounts the names are [Abdelrhman helmy , Mohamed Ayman , Yassin Waleed , Ayman Mohamed , Yousra , Omar , Menna] ")
+            engine.say("The Ready team created me in 2023 ........ and currently i am still under construction ................ if you want to know more about them you can just reach their GitHub acounts .............. the names are ............ [Abdelrhman helmy ,......... Mohamed Ayman ,........... Yassin Waleed ,.......... Ayman Mohamed ,......... Yousra ,........... Omar ,.......... Menna] ")
             engine.runAndWait()
             print('\n')
 
@@ -181,7 +195,7 @@ with S_R.Microphone() as src:
       
         elif text == "tell us more about yourself":
             print("Sure!, i am a prototype for a chat Buddy AI\nAnd i am still under construction so please excuse my slow performance\nAnd finally when i get drunk i really tend to play with 'Netflix' Database (*-*). ")
-            engine.say("Sure!, .......... i am a prototype for a chat Buddy A I ..................\n........... And i am still under construction so please excuse my slow performance\n................ And finally when i get drunk i really tend to play with 'Netflix' Database.")
+            engine.say("Sure!, .......... i am a prototype for a chat Buddy A I............................ And i am still under construction so please excuse my slow performance\n................ And finally when i get drunk i really tend to play with 'Netflix' Database.")
             engine.runAndWait()
             print('\n')
 
@@ -310,8 +324,7 @@ with S_R.Microphone() as src:
     #- proffesional Desmond commands ( Terminal commands )-#
 
 
-
-
+    
 
         elif text in "Desmond encrypt":
             print("Working on it...")
@@ -350,46 +363,3 @@ with S_R.Microphone() as src:
             print("Sorry i didn't understand,can you say that again in a more clear voice?")
             engine.say("Sorry i didn't understand,........can you say that again in a more clear voice?")
             engine.runAndWait()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# make him listen to the name    #DONE
-# if name was equal to jack    #DONE
-# send jack a message with a function()    #DONE
-# else if name was not equal jack go and make him listen again     #DONE
-# then if the name was equal jack send him a message (loop)
-# this loop will still work until name is equal to jack then it will break
-#
-#
-#
